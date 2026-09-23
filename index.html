@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalPulse: BP & Sugar Tracker — Precision Vitals & Medication Log</title>
+  
+  <!-- SEO & ASO Meta Tags -->
+  <meta name="description" content="Honest, clinically certified blood pressure and blood glucose tracking app. Features dual tachometer speedometers (AHA & ADA standards), exact medication reminder alarms, and doctor PDF reports. 100% offline & private.">
+  <meta name="keywords" content="blood pressure tracker, blood sugar monitor, glucose log, BP tracker, diabetes diary, hypertension tracker, pill reminder, medication alarm, doctor PDF report, AHA 2017 BP stages, ADA glycemic target">
+  <meta name="author" content="VitalPulse Health Technologies">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VitalPulse: BP & Sugar Tracker — Precision Vitals Log">
+  <meta property="og:description" content="Honest, calibrated medical logging for certified upper-arm cuffs and glucometers. No deceptive camera scans. Exact pill alarms & doctor reports.">
+  <meta property="og:image" content="assets/logo.jpg">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VitalPulse: BP & Sugar Tracker">
+  <meta name="twitter:description" content="Precision blood pressure, glucose and medication adherence tracking for Android.">
+  <meta name="twitter:image" content="assets/logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org SoftwareApplication Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VitalPulse: BP & Sugar Tracker",
+    "operatingSystem": "Android",
+    "applicationCategory": "HealthApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Clinical personal vitals logging application for blood pressure, glucose, and prescription medication alarms based on AHA and ADA standards."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Ambient Light Effects -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-glow-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-group">
+        <img src="assets/logo.jpg" alt="VitalPulse Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Vital<span>Pulse</span></span>
+          <span class="brand-badge">Clinical Vitals</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#simulator" class="nav-link">Live Speedometer</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#clinical-trust" class="nav-link">Clinical Standards</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+          <li class="mobile-nav-actions">
+            <a href="#download" class="btn-nav-cta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.22-.328V2.142c.067-.116.142-.228.22-.328zM15.207 13.414l2.122 2.121-12.02 6.87a2.37 2.37 0 0 1-1.01.243l10.908-9.234zm0-2.828L4.299 1.352c.31-.092.65-.138 1.01-.138.369 0 .736.05 1.02.21l12.01 6.862-3.132 2.296zm1.414 1.414l3.182 1.818c.95.543.95 1.43 0 1.974l-3.182 1.818-2.121-2.121 2.121-2.121z"/>
+              </svg>
+              Download on Google Play
+            </a>
+            <a href="privacy.html" class="btn-nav-policy">Privacy Policy (Play Console)</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="privacy.html" class="btn-nav-policy">Policy</a>
+        <a href="#download" class="btn-nav-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.22-.328V2.142c.067-.116.142-.228.22-.328zM15.207 13.414l2.122 2.121-12.02 6.87a2.37 2.37 0 0 1-1.01.243l10.908-9.234zm0-2.828L4.299 1.352c.31-.092.65-.138 1.01-.138.369 0 .736.05 1.02.21l12.01 6.862-3.132 2.296zm1.414 1.414l3.182 1.818c.95.543.95 1.43 0 1.974l-3.182 1.818-2.121-2.121 2.121-2.121z"/>
+          </svg>
+          Google Play
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content-col">
+          <div class="hero-badge-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            AHA 2017 & ADA Clinical Compliance
+          </div>
+
+          <h1 class="hero-title">
+            Precision Vitals Tracking.<br>
+            <span class="text-gradient-teal">100% Honest Medical Log.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            The honest cardiovascular and glycemic companion. Track blood pressure, blood glucose, and prescription medications with bottom-to-top tachometer speedometers, exact adherence alarms, and doctor-certified PDF reports.
+          </p>
+
+          <div class="hero-trust-chips">
+            <div class="trust-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              No Fake Camera Scans
+            </div>
+            <div class="trust-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              100% Offline SQLite
+            </div>
+            <div class="trust-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+              </svg>
+              Zero Ad Trackers
+            </div>
+            <div class="trust-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+              Doctor PDF Export
+            </div>
+          </div>
+
+          <div class="hero-cta-group" id="download">
+            <a href="#download" class="btn-hero-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.22-.328V2.142c.067-.116.142-.228.22-.328zM15.207 13.414l2.122 2.121-12.02 6.87a2.37 2.37 0 0 1-1.01.243l10.908-9.234zm0-2.828L4.299 1.352c.31-.092.65-.138 1.01-.138.369 0 .736.05 1.02.21l12.01 6.862-3.132 2.296zm1.414 1.414l3.182 1.818c.95.543.95 1.43 0 1.974l-3.182 1.818-2.121-2.121 2.121-2.121z"/>
+              </svg>
+              Download on Google Play
+            </a>
+            <a href="#simulator" class="btn-hero-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              Try Live Simulator
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="mockup-frame">
+            <div class="mockup-inner">
+              <img src="assets/mockup.jpg" alt="VitalPulse Mobile App Dashboard" class="mockup-image">
+            </div>
+            
+            <div class="floating-stat-card">
+              <div class="floating-stat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="floating-stat-text">
+                <h4>AHA & ADA Calibrated</h4>
+                <p>100% Medical Grade Math</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Honesty & Anti-Scam Callout Section -->
+    <section class="honesty-section" id="clinical-trust">
+      <div class="container">
+        <div class="honesty-card">
+          <div class="honesty-grid">
+            <div class="honesty-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="honesty-content">
+              <h3>
+                100% Honest Medical Logging
+                <span class="badge-no-fake">NO FAKE SCANS</span>
+              </h3>
+              <p>
+                Play Store apps claiming to measure blood pressure or glucose using your smartphone camera flashlight are medically deceptive and prohibited by clinical boards. Phones lack optical transillumination hardware to measure vascular pressure. VitalPulse adheres strictly to clinical protocols: measure using your certified arm cuff or glucometer, and log here for comprehensive doctor analysis.
+              </p>
+            </div>
+            <div class="honesty-tags">
+              <div class="honesty-tag-item">🩺 Certified Arm Cuff Data Only</div>
+              <div class="honesty-tag-item">🩸 FDA/CE Glucometer Logging</div>
+              <div class="honesty-tag-item">📄 One-Tap PDF for Cardiologists</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live Vitals Tachometer Simulator -->
+    <section class="simulator-section" id="simulator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Interactive Experience</span>
+          <h2 class="section-title">Test the Clinical Speedometer</h2>
+          <p class="section-description">
+            Experience our dynamic radial gauge engine. Drag the clinical sliders below to see real-time AHA 2017 & ADA risk tiering, MAP, and pulse pressure calculations.
+          </p>
+        </div>
+
+        <div class="simulator-card">
+          <!-- Controls Column -->
+          <div class="sim-controls-col">
+            <div style="display: flex; gap: 10px; margin-bottom: 24px;">
+              <button id="sim-mode-bp" class="btn-hero-primary" style="padding: 8px 18px; font-size: 0.85rem;">
+                ❤️ Blood Pressure
+              </button>
+              <button id="sim-mode-sugar" class="btn-hero-secondary" style="padding: 8px 18px; font-size: 0.85rem;">
+                🩸 Blood Glucose
+              </button>
+            </div>
+
+            <!-- BP Sliders -->
+            <div id="bp-controls">
+              <div class="sim-control-group">
+                <div class="sim-label-row">
+                  <span class="sim-label">Systolic (Upper Number)</span>
+                  <span class="sim-val-display"><span id="val-systolic">120</span> mmHg</span>
+                </div>
+                <input type="range" min="80" max="210" value="120" class="sim-slider" id="slider-systolic">
+              </div>
+
+              <div class="sim-control-group">
+                <div class="sim-label-row">
+                  <span class="sim-label">Diastolic (Lower Number)</span>
+                  <span class="sim-val-display"><span id="val-diastolic">80</span> mmHg</span>
+                </div>
+                <input type="range" min="50" max="130" value="80" class="sim-slider" id="slider-diastolic">
+              </div>
+            </div>
+
+            <!-- Glucose Sliders (Hidden by default) -->
+            <div id="sugar-controls" style="display: none;">
+              <div class="sim-control-group">
+                <div class="sim-label-row">
+                  <span class="sim-label">Blood Glucose Reading</span>
+                  <span class="sim-val-display" id="val-glucose">95 mg/dL</span>
+                </div>
+                <input type="range" min="50" max="320" value="95" class="sim-slider slider-cyan" id="slider-glucose">
+              </div>
+            </div>
+
+            <!-- Quick Key Metrics -->
+            <div class="sim-metrics-grid">
+              <div class="sim-metric-card">
+                <div class="sim-metric-title" id="metric-1-title">Mean Arterial (MAP)</div>
+                <div class="sim-metric-val" id="metric-1-val">93 mmHg</div>
+              </div>
+              <div class="sim-metric-card">
+                <div class="sim-metric-title" id="metric-2-title">Pulse Pressure (PP)</div>
+                <div class="sim-metric-val" id="metric-2-val">40 mmHg</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gauge Column -->
+          <div class="sim-gauge-col">
+            <div class="gauge-svg-container">
+              <svg class="gauge-svg" viewBox="0 0 280 280">
+                <defs>
+                  <!-- Track Gradient -->
+                  <linearGradient id="gaugeGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#10B981"/>
+                    <stop offset="40%" stop-color="#06B6D4"/>
+                    <stop offset="70%" stop-color="#F59E0B"/>
+                    <stop offset="100%" stop-color="#EF4444"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Full Circular Background Track (360 degrees round) -->
+                <circle cx="140" cy="140" r="90" fill="none" stroke="#1E293B" stroke-width="14"/>
+                
+                <!-- Active Progress Arc (From bottom 90° upwards clockwise) -->
+                <circle id="gauge-active-arc" cx="140" cy="140" r="90" fill="none" stroke="#10B981" stroke-width="14" stroke-linecap="round" transform="rotate(90 140 140)" stroke-dasharray="120 565.48" style="transition: stroke-dasharray 0.25s ease, stroke 0.25s ease;"/>
+
+                <!-- Glowing Indicator Bead on the rim at the tip of the arc -->
+                <g id="gauge-indicator-bead" transform="rotate(76, 140, 140)" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);">
+                  <!-- Outer glow -->
+                  <circle id="bead-glow" cx="140" cy="230" r="10" fill="rgba(16, 185, 129, 0.4)"/>
+                  <!-- White crisp ring -->
+                  <circle cx="140" cy="230" r="6" fill="#FFFFFF"/>
+                  <!-- Center colored dot -->
+                  <circle id="bead-core" cx="140" cy="230" r="3.5" fill="#10B981"/>
+                </g>
+              </svg>
+
+              <!-- Central Readout (Completely clean and unobstructed) -->
+              <div class="gauge-center-readout">
+                <div class="gauge-val-big" id="gauge-val-big">120/80</div>
+                <div class="gauge-unit-small" id="gauge-unit-small">mmHg • AHA 2017</div>
+              </div>
+            </div>
+
+            <div class="gauge-status-badge" id="gauge-status-badge" style="color: #10B981; background: rgba(16, 185, 129, 0.18); border: 1px solid #10B981;">
+              Normal
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Medical Architecture</span>
+          <h2 class="section-title">Built for Clinical Reliability</h2>
+          <p class="section-description">
+            Engineered with modern Android Jetpack Compose, Room SQLite, and exact AlarmManager scheduling to give patients and doctors pure, verifiable health intelligence.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-teal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h4>Radial Tachometer Speedometers</h4>
+            <p>
+              Instantly visualize systolic, diastolic, MAP, and pulse pressure on high-precision circular gauges sweeping upwards from bottom to top with real-time risk classification.
+            </p>
+            <span class="feature-tag">AHA 2017 & ADA Standards</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <h4>Exact Medication Reminder Alarms</h4>
+            <p>
+              Schedule prescription doses with Android 13+ exact alarms (`SCHEDULE_EXACT_ALARM`). Ring on time even in battery saver mode, complete with 1-tap "Mark as Taken" action.
+            </p>
+            <span class="feature-tag">Adherence Streak Tracking</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h4>Smooth Bezier Trend Curves</h4>
+            <p>
+              Interactive sparklines and bezier charts across 7, 30, and 90-day timeframes with lifestyle correlation tags (caffeine, salt, exercise, stress, meal context).
+            </p>
+            <span class="feature-tag">Morning/Evening Surge Analysis</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-coral">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h4>Doctor-Ready Clinical PDF Export</h4>
+            <p>
+              Generate structured, formatted medical PDF reports directly on your phone with clinical averages, distribution breakdowns, and estimated HbA1c for clinical visits.
+            </p>
+            <span class="feature-tag">Encrypted Device Storage</span>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h4>100% Offline SQLite Privacy</h4>
+            <p>
+              Zero external databases. Your private medical measurements stay encrypted on your Android phone using Room SQLite. No account creation required.
+            </p>
+            <span class="feature-tag">Zero Cloud Tracking</span>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h4>Biometric PIN Medical Lock</h4>
+            <p>
+              Guard sensitive health logs from prying eyes with an optional 4-digit security PIN screen and tactile haptic feedback.
+            </p>
+            <span class="feature-tag">Personal Data Vault</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Medical Transparency</span>
+          <h2 class="section-title">Why VitalPulse Stands Apart</h2>
+          <p class="section-description">
+            Compare our honest, clinically certified utility against typical Play Store ad-traps.
+          </p>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Clinical Standard</th>
+                <th class="highlight-col">VitalPulse (This App)</th>
+                <th>Camera Scan Apps</th>
+                <th>Generic Loggers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Measurement Honesty</strong></td>
+                <td class="highlight-col table-check">✓ 100% Honest (Certified Cuffs & Glucometers)</td>
+                <td class="table-cross">✗ Fake camera/flashlight scans</td>
+                <td>✓ Manual logging only</td>
+              </tr>
+              <tr>
+                <td><strong>AHA 2017 & ADA Risk Math</strong></td>
+                <td class="highlight-col table-check">✓ Exact clinical thresholds (MAP, PP, HbA1c)</td>
+                <td class="table-cross">✗ Random randomized numbers</td>
+                <td>△ Outdated WHO 1999 rules</td>
+              </tr>
+              <tr>
+                <td><strong>Offline Privacy</strong></td>
+                <td class="highlight-col table-check">✓ 100% Local SQLite on device</td>
+                <td class="table-cross">✗ Mandatory cloud account & tracking</td>
+                <td>△ Sells telemetry data</td>
+              </tr>
+              <tr>
+                <td><strong>Exact Medicine Alarms</strong></td>
+                <td class="highlight-col table-check">✓ `AlarmManager` wake alarms + streak tracking</td>
+                <td class="table-cross">✗ No pill reminder alarms</td>
+                <td>△ Basic delayed notifications</td>
+              </tr>
+              <tr>
+                <td><strong>Doctor PDF Export</strong></td>
+                <td class="highlight-col table-check">✓ Structured clinical summary with stats</td>
+                <td class="table-cross">✗ Watermarked paywalled PDF</td>
+                <td>△ Raw CSV export only</td>
+              </tr>
+              <tr>
+                <td><strong>Ad-Free Experience</strong></td>
+                <td class="highlight-col table-check">✓ Zero interstitial video popups</td>
+                <td class="table-cross">✗ Invasive full-screen ad popups</td>
+                <td>✗ Heavy banner advertisements</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Support & Questions</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              Does VitalPulse measure blood pressure using my phone camera?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <strong>No.</strong> Smartphones do not possess the optical or physical sensors required to measure blood pressure or blood sugar. Apps claiming to measure blood pressure using phone camera flashlights are deceptive medical fallacies. VitalPulse is designed for honest, manual recording of measurements taken with clinically certified upper-arm cuffs and CE/FDA approved glucometers.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              Is my medical data uploaded to any remote server or cloud?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <strong>Never.</strong> VitalPulse is built as an offline-first health utility. All systolic, diastolic, pulse, blood glucose readings, pill reminders, and clinical notes are saved exclusively in a local SQLite database on your device. We do not operate remote databases, we do not require account sign-ups, and we never sell health data.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              How do the medication alarms work on Android 13 and 14?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              VitalPulse utilizes Android's exact alarm scheduling API (`SCHEDULE_EXACT_ALARM` and `USE_EXACT_ALARM`) combined with `AlarmManager.setExactAndAllowWhileIdle`. This ensures your prescription reminders ring reliably at your scheduled time even if your phone is in Doze mode or battery saver. You can confirm doses with one tap via the "Mark as Taken" action.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              What clinical standards are used for risk classification?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              Blood pressure categories adhere to the <strong>2017 American Heart Association (AHA) and American College of Cardiology (ACC)</strong> guidelines (Normal, Elevated, Hypertension Stage 1, Hypertension Stage 2, Hypertensive Crisis). Blood glucose risk categories adhere to the <strong>American Diabetes Association (ADA)</strong> fasting and post-prandial glycemic thresholds, with automatic unit conversion between mg/dL and mmol/L.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I delete or export my health data anytime?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes. You have complete data sovereignty. In the Analytics screen, you can delete any blood pressure or glucose record with a single tap, which immediately recalculates all statistics. You can also generate a comprehensive PDF medical report with clinical graphs to share with your cardiologist or endocrinologist.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              Is VitalPulse a certified medical device?
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              VitalPulse is a personal health logging and trend visualization utility. It is not an FDA-approved medical diagnostic device and does not offer medical advice. Always consult a licensed healthcare professional for hypertension or diabetes diagnosis, treatment adjustments, or medical emergencies.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Prominent Medical Disclaimer required by Play Store -->
+      <div class="medical-disclaimer-box">
+        <strong>MEDICAL DISCLAIMER:</strong> VitalPulse: BP & Sugar Tracker is an informational health logging and tracking tool designed for self-monitoring. It is NOT a medical device, cannot measure physiological vitals through hardware sensors, and does not provide medical diagnosis, treatment recommendations, or emergency services. Always use validated medical cuffs and glucometers, and seek professional medical guidance from a qualified doctor for health concerns.
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-group">
+            <img src="assets/logo.jpg" alt="VitalPulse Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-name">Vital<span>Pulse</span></span>
+              <span class="brand-badge">Clinical Vitals</span>
+            </div>
+          </div>
+          <p>
+            Honest, clinical-grade blood pressure, glucose, and medication logging utility. Built for patient privacy and doctor clarity.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal & Compliance</h5>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy (Play Console)</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html#data-safety">Data Safety Section</a></li>
+            <li><a href="privacy.html#permissions">Permission Disclosures</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>App & Developer</h5>
+          <ul class="footer-links">
+            <li><a href="#simulator">Live Speedometer</a></li>
+            <li><a href="#features">App Features</a></li>
+            <li><a href="mailto:support@vitalpulse.app">Developer Support</a></li>
+            <li><a href="#download">Google Play Listing</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 VitalPulse. All rights reserved. Personal Developer Account.</span>
+        <span>Version 1.0.0 (Production Release)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
