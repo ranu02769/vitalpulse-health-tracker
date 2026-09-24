@@ -177,11 +177,6 @@
               <td>Required to display timely medication reminder notifications and daily resting vitals check alerts. Users can tap notifications directly to confirm doses ("Mark as Taken"). We never send marketing or promotional notifications.</td>
             </tr>
             <tr>
-              <td><code>android.permission.SCHEDULE_EXACT_ALARM</code><br><code>android.permission.USE_EXACT_ALARM</code></td>
-              <td>Exact Alarm API (Android 12/13+)</td>
-              <td>Required strictly for prescription medication adherence. Critical cardiovascular and diabetes medications (e.g., antihypertensives, blood thinners, insulin) require exact timing. This permission allows <code>AlarmManager.setExactAndAllowWhileIdle</code> to trigger alarms precisely when due, even when the device is idle or in battery saver mode.</td>
-            </tr>
-            <tr>
               <td><code>android.permission.RECEIVE_BOOT_COMPLETED</code></td>
               <td>Normal (Install-time)</td>
               <td>When an Android phone restarts, the operating system clears active <code>AlarmManager</code> timers. This permission allows our local <code>VitalAlarmReceiver</code> to re-register your scheduled medication alarms upon device reboot so you do not miss scheduled medication doses.</td>
